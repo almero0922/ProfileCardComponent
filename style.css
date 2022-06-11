@@ -1,0 +1,112 @@
+:root{
+    --darkCyan: hsl(185, 75%, 39%);
+    --veryDarkDesaturatedBlue: hsl(229, 23%, 23%);
+    --darkGrayishBlue: hsl(227, 10%, 46%);
+    --darkGray: hsl(0, 0%, 59%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Kumbh Sans', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--darkCyan);
+}
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.background-left{
+    display: inline-block;
+    background-image: url('./images/bg-pattern-top.svg');
+    width: 50%;
+    height: 50%;
+    background-position: bottom right;
+}
+.background-right{
+    display: inline-block;
+    background-image: url('./images/bg-pattern-bottom.svg');
+    width: 50%;
+    height: 50%;
+    background-position: top left;
+    justify-self: flex-end;
+    align-self: flex-end;
+}
+.container-card{
+    background-color: white;
+    border-radius: 15px;
+    position: absolute;
+    width: 20rem;
+    height: 26rem;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.card-background{
+    display: inline-block;
+    width: 100%;
+    height: 10rem;
+    background-image: url('./images/bg-pattern-card.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 15px 15px 0 0;
+}
+.container-info{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-info .profile-img{
+    display: inline-block;
+    width: 7rem;
+    height: 7rem;
+    background-image: url('./images/image-victor.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+    position: absolute;
+    top: 110px;
+}
+.container-info h3{
+    margin-top: 5rem;
+    font-size: 18px;
+    color: var(--veryDarkDesaturatedBlue);
+    margin-bottom: 0.6rem;
+}
+.container-info .age{
+    color: var(--darkGrayishBlue);
+    font-weight: 400;
+}
+.container-info p{
+    color: var(--darkGrayishBlue);
+    font-weight: 400;
+    margin-bottom: 1.8rem;
+}
+.container-stats{
+    width: 100%;
+    height: 5.6rem;
+    border-top: 1px solid var(--darkGray);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 1fr;
+    align-items: end;
+    justify-items: center;
+}
+.container-stats h3{
+    color: var(--veryDarkDesaturatedBlue);    
+}
+.container-stats p{
+    font-size: 10px;
+    align-self: start;
+    color: var(--darkGray);
+}
